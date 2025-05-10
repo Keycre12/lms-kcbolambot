@@ -1,35 +1,4 @@
 
-Final Task #1: Implement all project features
-John Rey Cilin
-•
-Feb 16 (Edited Apr 22)
-Due 11:59 PM
-6.1 Implement all features from project feature lists.
-6.1.1 Submit the following:
-6.1.1.1 project-name.rar
-6.1.1.2 project feature lists in README.md
-6.1.1.3 Final ERD lastname-project-name-erd.pdf file of project
-
-Referrences:
-sim github repository:
-https://github.com/cilinjohnrey/sim
-
-sim postman example api's:
-https://www.postman.com/unswaa20/workspace/my-workspace/collection/38957086-682b1cfe-4b78-4c6f-adcb-90c6b8f01338?action=share&creator=38957086&active-environment=38957086-2df5840c-2ab0-423a-a239-8838e68f08ac
-Class comments
-Your work
-Assigned
-
-bolambot-lims-ERD.pdf
-PDF
-
-README.md
-Text
-
-GitHub - Keycre12/lms-kcbolambot
-https://github.com/Keycre12/lms-kcbolambot.git
-Work cannot be turned in after the due date
-Private comments
 Project Name: Library Inventory System
 
 1. List of Features:
