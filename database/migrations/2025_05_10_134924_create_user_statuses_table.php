@@ -19,8 +19,8 @@ return new class extends Migration
         });
 
         $userStatuses = [
-            ['name' => 'Active'],
-            ['name' => 'Inactive'],
+            ['name' => 'Online'],
+            ['name' => 'Offline'],
         ];
 
         foreach($userStatuses as $userStatus){

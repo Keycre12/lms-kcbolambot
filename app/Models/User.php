@@ -10,47 +10,38 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+     use HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    protected $primaryKey = 'user_id';
+    
     protected $fillable = [
-        'first_name',
-        'middle_name',
-        'last_name',
-        'email',
-        'password',
-        'role_id',
-        'user_status_id',
+        'role_id', 'u_name', 'u_email', 'u_pass', 'status'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ['u_pass'];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
-    public function role(){
-        return $this->belongsTo(Role::class);
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id');
     }
 
-    public function userStatus(){
-        return $this->belongsTo(UserStatus::class);
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class, 'user_id');
+    }
+
+    public function statusRecords()
+    {
+        return $this->hasMany(UserStatus::class, 'user_id');
+    }
+
+    public function getAuthPassword()
+    {
+        return $this->u_pass;
+    }
+
+    public function setUPassAttribute($value)
+    {
+        $this->attributes['u_pass'] = Hash::make($value);
     }
 }
