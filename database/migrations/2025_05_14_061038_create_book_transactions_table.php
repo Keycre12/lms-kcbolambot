@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('book_transactions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('book_id')->constrained('books');
+            $table->foreignId('user_id')->constrained('users');
+            $table->enum('tr_type', ['restock', 'damaged', 'borrowed']);
+            $table->integer('quantity');
+            $table->date('date');
+            $table->timestamps(); 
         });
     }
 

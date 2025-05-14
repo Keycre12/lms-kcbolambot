@@ -10,4 +10,9 @@ class UserStatus extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
