@@ -22,7 +22,7 @@
 •	Add Book
 •	Edit Book
 •	Remove Book
-6. 5. Book Transaction Page
+6. Book Transaction Page
 •	Get Transaction
 •	Add Transaction
 •	Edit Transaction
